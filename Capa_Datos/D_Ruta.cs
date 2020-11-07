@@ -20,12 +20,45 @@ namespace Capa_Datos
             conexion.Open();
             OracleCommand cmd = conexion.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_CARGARAUTOBUS";
+            cmd.CommandText = "SP_CARGARRUTA";
             OracleParameter par1 = new OracleParameter();
             par1.OracleDbType = OracleDbType.RefCursor;
             par1.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(par1);
-            OracleParameter par2 = new OracleParameter("v_modelo", buscar);
+            OracleParameter par2 = new OracleParameter("v_ruta", buscar);
+            cmd.Parameters.Add(par2);
+            cmd.ExecuteNonQuery();
+            OracleRefCursor cursor = (OracleRefCursor)par1.Value;
+            OracleDataReader read = cursor.GetDataReader();
+
+            List<E_Ruta> Listar = new List<E_Ruta>();
+
+            while (read.Read())
+            {
+                Listar.Add(new E_Ruta
+                {
+
+                    Id_ruta = read.GetInt32(0),
+                    Ruta = read.GetString(1)
+
+                });
+            }
+
+            conexion.Close();
+            return Listar;
+        }
+
+        public List<E_Ruta> ListarRutasDisponibles(string buscar)
+        {
+            conexion.Open();
+            OracleCommand cmd = conexion.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_CARGARRUTADISPONIBLE";
+            OracleParameter par1 = new OracleParameter();
+            par1.OracleDbType = OracleDbType.RefCursor;
+            par1.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(par1);
+            OracleParameter par2 = new OracleParameter("v_ruta", buscar);
             cmd.Parameters.Add(par2);
             cmd.ExecuteNonQuery();
             OracleRefCursor cursor = (OracleRefCursor)par1.Value;

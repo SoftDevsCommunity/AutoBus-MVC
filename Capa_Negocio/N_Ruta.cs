@@ -17,6 +17,11 @@ namespace Capa_Negocio
             return objRuta.ListarRutas(buscar);
         }
 
+        public List<E_Ruta> ListandoRutasDisponibles(string buscar)
+        {
+            return objRuta.ListarRutasDisponibles(buscar);
+        }
+
         public void IngresandoRutas(E_Ruta Ruta)
         {
             objRuta.InsertarRuta(Ruta);

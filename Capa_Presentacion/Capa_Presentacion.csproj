@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +50,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmAgregarAutobus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmAgregarAutobus.Designer.cs">
+      <DependentUpon>frmAgregarAutobus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarChofer.Designer.cs">
+      <DependentUpon>frmAgregarChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignarAutobus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarAutobus.Designer.cs">
+      <DependentUpon>frmAsignarAutobus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFace.Designer.cs">
+      <DependentUpon>frmFace.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarAutobus.resx">
+      <DependentUpon>frmAgregarAutobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarChofer.resx">
+      <DependentUpon>frmAgregarChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarAutobus.resx">
+      <DependentUpon>frmAsignarAutobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFace.resx">
+      <DependentUpon>frmFace.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +110,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">
+      <Project>{cbf23dfc-7beb-4b72-9b51-6f5740ff5435}</Project>
+      <Name>Capa_Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Project>{7b918e94-3090-4c29-823f-e6b14f864507}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\textbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\añadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ruta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

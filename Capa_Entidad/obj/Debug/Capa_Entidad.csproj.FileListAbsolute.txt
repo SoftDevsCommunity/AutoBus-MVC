@@ -1,0 +1,6 @@
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Entidad\obj\Debug\Capa_Entidad.csprojAssemblyReference.cache
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Entidad\obj\Debug\Capa_Entidad.pdb

@@ -40,7 +40,7 @@ namespace Capa_Datos
                     Nombre = read.GetString(0),
                     Apellido = read.GetString(1),
                     Cedula = read.GetString(2),
-                    Fecha_nacimiento = read.GetString(3),
+                    Fecha_nacimiento = read.GetDateTime(3),
                     Marca = read.GetString(4),
                     Modelo = read.GetString(5),
                     Ruta = read.GetString(5)
@@ -76,7 +76,7 @@ namespace Capa_Datos
                     Cedula = read.GetString(0),
                     Nombre = read.GetString(1),
                     Apellido = read.GetString(2),
-                    Fecha_nacimiento = read.GetString(3)
+                    Fecha_nacimiento = read.GetDateTime(3)
                 });
             }
 
@@ -96,6 +96,8 @@ namespace Capa_Datos
             cmd.Parameters.Add(par2);
             OracleParameter par3 = new OracleParameter("v_apellido", ChoferCompleto.Apellido);
             cmd.Parameters.Add(par3);
+            OracleParameter par4 = new OracleParameter("v_fecha_nacimiento", ChoferCompleto.Fecha_nacimiento);
+            cmd.Parameters.Add(par4);
             cmd.ExecuteNonQuery();
             conexion.Close();
         }

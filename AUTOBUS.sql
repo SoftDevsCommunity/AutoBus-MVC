@@ -78,12 +78,31 @@ AS
  END;
  /
  
+CREATE OR REPLACE PROCEDURE SP_CARGARAUTOBUSDISPONIBLE ( refcargar out sys_refcursor, v_modelo in VARCHAR2 )
+AS
+ BEGIN
+ OPEN refcargar for
+ SELECT id_autobus, marca, modelo, placa, color, año
+ FROM autobus 
+ WHERE modelo LIKE '%'||v_modelo||'%' AND cedula IS NULL;
+ END;
+ /
+ 
 CREATE OR REPLACE PROCEDURE SP_CARGARRUTA ( refcargar out sys_refcursor, v_ruta in VARCHAR2 )
 AS
  BEGIN
  OPEN refcargar for
  SELECT id_ruta, ruta  FROM ruta
  WHERE ruta LIKE '%'||v_ruta||'%';
+ END;
+ /
+ 
+CREATE OR REPLACE PROCEDURE SP_CARGARRUTADISPONIBLE ( refcargar out sys_refcursor, v_ruta in VARCHAR2 )
+AS
+ BEGIN
+ OPEN refcargar for
+ SELECT id_ruta, ruta  FROM ruta
+ WHERE ruta LIKE '%'||v_ruta||'%' AND ID_AUTOBUS IS NULL;
  END;
  /
  
@@ -105,12 +124,12 @@ CREATE SEQUENCE SEQ_AUTOBUS
                 
  
  
-CREATE OR REPLACE PROCEDURE SP_INSERTARAUTOBUS ( v_cedula in VARCHAR2, v_marca in VARCHAR2, v_modelo in VARCHAR2, 
+CREATE OR REPLACE PROCEDURE SP_INSERTARAUTOBUS ( v_marca in VARCHAR2, v_modelo in VARCHAR2, 
 v_placa in VARCHAR2, v_color in VARCHAR2, v_año in VARCHAR2 )
 AS
  BEGIN
- INSERT INTO AUTOBUS (id_autobus, cedula, marca, modelo, placa, color, año)
- VALUES (SEQ_AUTOBUS.NEXTVAL, v_cedula, v_marca, v_modelo, v_placa, v_color, v_año);
+ INSERT INTO AUTOBUS (id_autobus, marca, modelo, placa, color, año)
+ VALUES (SEQ_AUTOBUS.NEXTVAL, v_marca, v_modelo, v_placa, v_color, v_año);
  END;
  /
  
@@ -135,6 +154,8 @@ AS
  BEGIN
  UPDATE CHOFER SET ID_AUTOBUS = v_id_autobus
  WHERE cedula = v_cedula;
+ UPDATE AUTOBUS SET CEDULA = v_cedula
+ WHERE ID_AUTOBUS = v_id_autobus;
  END;
  /
  
@@ -163,7 +184,7 @@ VALUES (SEQ_RUTA.NEXTVAL, 'La Churchill');
 INSERT INTO RUTA(ID_RUTA, RUTA)
 VALUES (SEQ_RUTA.NEXTVAL, 'Puente Juan Carlos');
 
-SELECT * FROM RUTA;
- 
- COMMIT;
+---Hace un stored procedure para cargar los choferes sin asignaciones
+
+COMMIT;
 

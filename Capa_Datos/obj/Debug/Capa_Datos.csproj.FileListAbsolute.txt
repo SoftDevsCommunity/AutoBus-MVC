@@ -1,0 +1,10 @@
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Datos\obj\Debug\Capa_Datos.pdb
