@@ -25,7 +25,7 @@ namespace Capa_Presentacion
 
         private void MostrarChoferes(string buscar)
         {
-            tablaChofer.DataSource = objNChofer.ListandoChofer(buscar);
+            tablaChofer.DataSource = objNChofer.ListandoChoferDisponible(buscar);
         }
 
         private void MostrarAutobus(string buscar)
@@ -38,12 +38,21 @@ namespace Capa_Presentacion
             MostrarChoferes(txtBuscarChofer.Text);
         }
 
+        private void tablasVacia()
+        {
+            if(tablaChofer.Rows.Count == 0 || tablaAutobus.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay chofer o autobus disponible");
+            }
+        }
+
         private void frmAsignarAutobus_Load(object sender, EventArgs e)
         {
             MostrarChoferes("");
             MostrarAutobus("");
             AccionesTablasChofer();
             AccionesTablasAutobus();
+            tablasVacia();
         }
 
         private void AccionesTablasChofer()

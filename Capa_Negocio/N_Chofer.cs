@@ -22,6 +22,11 @@ namespace Capa_Negocio
             return objChofer.CargarChofer(buscar);
         }
 
+        public List<E_ChoferCompleto> ListandoChoferDisponible(string buscar)
+        {
+            return objChofer.CargarChoferDisponible(buscar);
+        }
+
         public void IngresandoChofer(E_ChoferCompleto ChoferCompleto)
         {
             objChofer.InsertarChofer(ChoferCompleto);

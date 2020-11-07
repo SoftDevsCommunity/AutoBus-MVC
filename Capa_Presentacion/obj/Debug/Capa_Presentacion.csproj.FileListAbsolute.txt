@@ -20,3 +20,5 @@ C:\Users\Bra y Da\source\repos\AutoBus\Capa_Presentacion\bin\Debug\Bunifu_UI_v1.
 C:\Users\Bra y Da\source\repos\AutoBus\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmAgregarChofer.resources
 C:\Users\Bra y Da\source\repos\AutoBus\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmAgregarAutobus.resources
 C:\Users\Bra y Da\source\repos\AutoBus\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmAsignarAutobus.resources
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmRuta.resources
+C:\Users\Bra y Da\source\repos\AutoBus\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmAsignarAutobusRuta.resources

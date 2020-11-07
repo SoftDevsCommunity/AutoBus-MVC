@@ -68,6 +68,15 @@ AS
  END;
  /
  
+CREATE OR REPLACE PROCEDURE SP_CARGARCHOFERDISPONIBLE ( refcargar out sys_refcursor, v_nombre in VARCHAR2 )
+AS
+ BEGIN
+ OPEN refcargar for
+ SELECT cedula, nombre, apellido, fecha_nacimiento  FROM chofer
+ WHERE nombre LIKE '%'||v_nombre||'%' AND ID_AUTOBUS IS NULL;
+ END;
+ /
+ 
 CREATE OR REPLACE PROCEDURE SP_CARGARAUTOBUS ( refcargar out sys_refcursor, v_modelo in VARCHAR2 )
 AS
  BEGIN
@@ -184,7 +193,7 @@ VALUES (SEQ_RUTA.NEXTVAL, 'La Churchill');
 INSERT INTO RUTA(ID_RUTA, RUTA)
 VALUES (SEQ_RUTA.NEXTVAL, 'Puente Juan Carlos');
 
----Hace un stored procedure para cargar los choferes sin asignaciones
+--- Crear procedure de autobus asignados
 
 COMMIT;
 

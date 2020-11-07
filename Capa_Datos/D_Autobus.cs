@@ -93,21 +93,32 @@ namespace Capa_Datos
 
         public void InsertarAutobus (E_Autobus Autobus)
         {
-            conexion.Open();
-            OracleCommand cmd = conexion.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_INSERTARAUTOBUS";
-            OracleParameter par1 = new OracleParameter("v_marca", Autobus.Marca);
-            cmd.Parameters.Add(par1);
-            OracleParameter par2 = new OracleParameter("v_modelo", Autobus.Modelo);
-            cmd.Parameters.Add(par2);
-            OracleParameter par3 = new OracleParameter("v_placa", Autobus.Placa);
-            cmd.Parameters.Add(par3);
-            OracleParameter par4 = new OracleParameter("v_color", Autobus.Color);
-            cmd.Parameters.Add(par4);
-            OracleParameter par5 = new OracleParameter("v_año", Autobus.Año);
-            cmd.Parameters.Add(par5);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                conexion.Open();
+                OracleCommand cmd = conexion.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SP_INSERTARAUTOBUS";
+                OracleParameter par1 = new OracleParameter("v_marca", Autobus.Marca);
+                cmd.Parameters.Add(par1);
+                OracleParameter par2 = new OracleParameter("v_modelo", Autobus.Modelo);
+                cmd.Parameters.Add(par2);
+                OracleParameter par3 = new OracleParameter("v_placa", Autobus.Placa);
+                cmd.Parameters.Add(par3);
+                OracleParameter par4 = new OracleParameter("v_color", Autobus.Color);
+                cmd.Parameters.Add(par4);
+                OracleParameter par5 = new OracleParameter("v_año", Autobus.Año);
+                cmd.Parameters.Add(par5);
+                cmd.ExecuteNonQuery();
+            } catch (OracleException e)
+            {
+                string errorMessage = "Code " + e.ErrorCode + ", Message " + e.Message;
+
+                System.Diagnostics.EventLog log = new System.Diagnostics.EventLog();
+                log.Source = "My application";
+                log.WriteEntry(errorMessage);
+            }
+            
             conexion.Close();
         }
 

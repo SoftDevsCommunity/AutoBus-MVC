@@ -86,7 +86,7 @@ namespace Capa_Datos
             conexion.Open();
             OracleCommand cmd = conexion.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_CARGARAUTOBUS";
+            cmd.CommandText = "SP_INSERTARRUTA";
             OracleParameter par1 = new OracleParameter("v_ruta", Ruta.Ruta);
             cmd.Parameters.Add(par1);
             cmd.ExecuteNonQuery();

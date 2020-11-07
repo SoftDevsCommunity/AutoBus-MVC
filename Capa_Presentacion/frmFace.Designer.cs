@@ -179,6 +179,7 @@
             this.btnAsignarRuta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAsignarRuta.Textcolor = System.Drawing.Color.White;
             this.btnAsignarRuta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarRuta.Click += new System.EventHandler(this.btnAsignarRuta_Click);
             // 
             // btnAsignarAutobus
             // 
@@ -248,6 +249,7 @@
             this.btnAgregarRuta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarRuta.Textcolor = System.Drawing.Color.White;
             this.btnAgregarRuta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarRuta.Click += new System.EventHandler(this.btnAgregarRuta_Click);
             // 
             // btnAgregarAutobus
             // 

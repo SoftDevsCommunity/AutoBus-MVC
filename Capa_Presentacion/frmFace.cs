@@ -65,5 +65,17 @@ namespace Capa_Presentacion
             frmAsignarAutobus frmAsignarBus = new frmAsignarAutobus();
             frmAsignarBus.Show();
         }
+
+        private void btnAgregarRuta_Click(object sender, EventArgs e)
+        {
+            frmRuta fRuta = new frmRuta();
+            fRuta.Show();
+        }
+
+        private void btnAsignarRuta_Click(object sender, EventArgs e)
+        {
+            frmAsignarAutobusRuta AsignarAR = new frmAsignarAutobusRuta();
+            AsignarAR.Show();
+        }
     }
 }
