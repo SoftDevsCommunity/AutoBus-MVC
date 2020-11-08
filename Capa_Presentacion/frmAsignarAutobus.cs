@@ -57,20 +57,12 @@ namespace Capa_Presentacion
 
         private void AccionesTablasChofer()
         {
-            tablaChofer.Columns[0].Width = 100;
-            tablaChofer.Columns[1].Width = 100;
-            tablaChofer.Columns[2].Width = 100;
-            tablaChofer.Columns[3].Width = 100;
+            tablaChofer.AutoResizeColumns();
         }
 
         private void AccionesTablasAutobus()
         {
-            tablaAutobus.Columns[0].Width = 30;
-            tablaAutobus.Columns[1].Width = 30;
-            tablaAutobus.Columns[2].Width = 60;
-            tablaAutobus.Columns[3].Width = 70;
-            tablaAutobus.Columns[4].Width = 20;
-            tablaAutobus.Columns[5].Width = 60;
+            tablaAutobus.AutoResizeColumns();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

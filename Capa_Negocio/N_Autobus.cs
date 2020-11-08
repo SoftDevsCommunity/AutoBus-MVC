@@ -22,6 +22,11 @@ namespace Capa_Negocio
             return objAutobus.ListarAutobusDisponible(buscar);
         }
 
+        public List<E_Autobus> ListandoAutobusAsignados(string buscar)
+        {
+            return objAutobus.ListarAutobusAsignados(buscar);
+        }
+
         public void IngresarAutobus(E_Autobus Autobus)
         {
             objAutobus.InsertarAutobus(Autobus);

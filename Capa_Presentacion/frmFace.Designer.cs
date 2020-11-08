@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +46,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRefrescar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaChoferCompleto)).BeginInit();
@@ -127,23 +134,23 @@
             this.tablaChoferCompleto.BackgroundColor = System.Drawing.Color.White;
             this.tablaChoferCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaChoferCompleto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaChoferCompleto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaChoferCompleto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.tablaChoferCompleto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaChoferCompleto.ColumnHeadersVisible = false;
-            this.tablaChoferCompleto.Location = new System.Drawing.Point(47, 187);
+            this.tablaChoferCompleto.Location = new System.Drawing.Point(6, 220);
             this.tablaChoferCompleto.Name = "tablaChoferCompleto";
             this.tablaChoferCompleto.ReadOnly = true;
             this.tablaChoferCompleto.RowHeadersVisible = false;
             this.tablaChoferCompleto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaChoferCompleto.Size = new System.Drawing.Size(417, 232);
+            this.tablaChoferCompleto.Size = new System.Drawing.Size(625, 232);
             this.tablaChoferCompleto.TabIndex = 11;
             // 
             // btnAsignarRuta
@@ -167,7 +174,7 @@
             this.btnAsignarRuta.IconVisible = true;
             this.btnAsignarRuta.IconZoom = 90D;
             this.btnAsignarRuta.IsTab = false;
-            this.btnAsignarRuta.Location = new System.Drawing.Point(609, 365);
+            this.btnAsignarRuta.Location = new System.Drawing.Point(637, 398);
             this.btnAsignarRuta.Name = "btnAsignarRuta";
             this.btnAsignarRuta.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnAsignarRuta.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -202,7 +209,7 @@
             this.btnAsignarAutobus.IconVisible = true;
             this.btnAsignarAutobus.IconZoom = 90D;
             this.btnAsignarAutobus.IsTab = false;
-            this.btnAsignarAutobus.Location = new System.Drawing.Point(609, 314);
+            this.btnAsignarAutobus.Location = new System.Drawing.Point(637, 338);
             this.btnAsignarAutobus.Name = "btnAsignarAutobus";
             this.btnAsignarAutobus.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnAsignarAutobus.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -237,7 +244,7 @@
             this.btnAgregarRuta.IconVisible = true;
             this.btnAgregarRuta.IconZoom = 90D;
             this.btnAgregarRuta.IsTab = false;
-            this.btnAgregarRuta.Location = new System.Drawing.Point(609, 262);
+            this.btnAgregarRuta.Location = new System.Drawing.Point(637, 278);
             this.btnAgregarRuta.Name = "btnAgregarRuta";
             this.btnAgregarRuta.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnAgregarRuta.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -272,7 +279,7 @@
             this.btnAgregarAutobus.IconVisible = true;
             this.btnAgregarAutobus.IconZoom = 90D;
             this.btnAgregarAutobus.IsTab = false;
-            this.btnAgregarAutobus.Location = new System.Drawing.Point(609, 209);
+            this.btnAgregarAutobus.Location = new System.Drawing.Point(637, 220);
             this.btnAgregarAutobus.Name = "btnAgregarAutobus";
             this.btnAgregarAutobus.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnAgregarAutobus.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -307,7 +314,7 @@
             this.btnAgregarChofer.IconVisible = true;
             this.btnAgregarChofer.IconZoom = 90D;
             this.btnAgregarChofer.IsTab = false;
-            this.btnAgregarChofer.Location = new System.Drawing.Point(609, 156);
+            this.btnAgregarChofer.Location = new System.Drawing.Point(637, 162);
             this.btnAgregarChofer.Name = "btnAgregarChofer";
             this.btnAgregarChofer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnAgregarChofer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -362,7 +369,7 @@
             this.btnRefrescar.IconVisible = true;
             this.btnRefrescar.IconZoom = 90D;
             this.btnRefrescar.IsTab = false;
-            this.btnRefrescar.Location = new System.Drawing.Point(482, 262);
+            this.btnRefrescar.Location = new System.Drawing.Point(657, 94);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnRefrescar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -376,11 +383,95 @@
             this.btnRefrescar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(4, 205);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 12);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Cedula";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(118, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 12);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Nombre";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(173, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 12);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Apellido";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(227, 205);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 12);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Fecha_Nacimiento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(343, 205);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Marca";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(406, 205);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 12);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Modelo";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(495, 205);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 12);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Ruta";
+            // 
             // frmFace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.tablaChoferCompleto);
             this.Controls.Add(this.btnAsignarRuta);
@@ -425,6 +516,13 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregarAutobus;
         private System.Windows.Forms.DataGridView tablaChoferCompleto;
         private Bunifu.Framework.UI.BunifuFlatButton btnRefrescar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 

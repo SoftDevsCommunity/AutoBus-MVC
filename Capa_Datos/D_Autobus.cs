@@ -91,6 +91,46 @@ namespace Capa_Datos
             return Listar;
         }
 
+        public List<E_Autobus> ListarAutobusAsignados(string buscar)
+        {
+            conexion.Open();
+            OracleCommand cmd = conexion.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_CARGARAUTOBUSASIGNADOS";
+            OracleParameter par1 = new OracleParameter();
+            par1.OracleDbType = OracleDbType.RefCursor;
+            par1.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(par1);
+            OracleParameter par2 = new OracleParameter("v_modelo", buscar);
+            cmd.Parameters.Add(par2);
+            cmd.ExecuteNonQuery();
+            OracleRefCursor cursor = (OracleRefCursor)par1.Value;
+            OracleDataReader read = cursor.GetDataReader();
+
+            List<E_Autobus> Listar = new List<E_Autobus>();
+
+            while (read.Read())
+            {
+                Listar.Add(new E_Autobus
+                {
+
+                    Id_autobus = read.GetInt32(0),
+                    Cedula = read.GetString(1),
+                    Nombre = read.GetString(2),
+                    Apellido = read.GetString(3),
+                    Marca = read.GetString(4),
+                    Modelo = read.GetString(5),
+                    Placa = read.GetString(6),
+                    Color = read.GetString(7),
+                    Año = read.GetString(8)
+
+                });
+            }
+
+            conexion.Close();
+            return Listar;
+        }
+
         public void InsertarAutobus (E_Autobus Autobus)
         {
             try

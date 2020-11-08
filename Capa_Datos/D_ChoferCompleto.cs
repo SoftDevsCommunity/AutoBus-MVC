@@ -43,7 +43,7 @@ namespace Capa_Datos
                     Fecha_nacimiento = read.GetDateTime(3),
                     Marca = read.GetString(4),
                     Modelo = read.GetString(5),
-                    Ruta = read.GetString(5)
+                    Ruta = read.GetString(6)
                 });
             }
 

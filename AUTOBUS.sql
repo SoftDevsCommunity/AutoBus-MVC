@@ -9,13 +9,6 @@ CREATE TABLE CHOFER (
  CONSTRAINT uq_chofer_id_autobus UNIQUE (ID_AUTOBUS),
  CONSTRAINT uq_chofer_id_ruta UNIQUE (ID_RUTA)
 );
-
-ALTER TABLE CHOFER
- ADD CONSTRAINT fk_chofer_id_autobus FOREIGN KEY (ID_AUTOBUS) REFERENCES AUTOBUS (ID_AUTOBUS) ON DELETE SET NULL;
-
- 
-ALTER TABLE CHOFER
- ADD CONSTRAINT fk_chofer_id_ruta FOREIGN KEY (ID_RUTA) REFERENCES RUTA (ID_RUTA) ON DELETE SET NULL;
  
 CREATE TABLE AUTOBUS (
  ID_AUTOBUS NUMBER(4),
@@ -32,10 +25,6 @@ CREATE TABLE AUTOBUS (
  CONSTRAINT uq_autobus_id_ruta UNIQUE (ID_RUTA)
 );
 
-ALTER TABLE AUTOBUS
- ADD CONSTRAINT fk_autobus_id_ruta FOREIGN KEY (ID_RUTA) REFERENCES RUTA (ID_RUTA) ON DELETE SET NULL;
- 
-
 CREATE TABLE RUTA (
  ID_RUTA NUMBER(4),
  RUTA VARCHAR2(25),
@@ -45,6 +34,16 @@ CREATE TABLE RUTA (
  CONSTRAINT  uq_ruta_id_autobus UNIQUE (ID_AUTOBUS),
  CONSTRAINT  uq_ruta_ruta UNIQUE (RUTA)
 );
+
+ALTER TABLE CHOFER
+ ADD CONSTRAINT fk_chofer_id_autobus FOREIGN KEY (ID_AUTOBUS) REFERENCES AUTOBUS (ID_AUTOBUS) ON DELETE SET NULL;
+
+ 
+ALTER TABLE CHOFER
+ ADD CONSTRAINT fk_chofer_id_ruta FOREIGN KEY (ID_RUTA) REFERENCES RUTA (ID_RUTA) ON DELETE SET NULL;
+ 
+ALTER TABLE AUTOBUS
+ ADD CONSTRAINT fk_autobus_id_ruta FOREIGN KEY (ID_RUTA) REFERENCES RUTA (ID_RUTA) ON DELETE SET NULL;
 
 
 
@@ -64,7 +63,8 @@ AS
  BEGIN
  OPEN refcargar for
  SELECT cedula, nombre, apellido, fecha_nacimiento  FROM chofer
- WHERE nombre LIKE '%'||v_nombre||'%';
+ WHERE nombre LIKE '%'||v_nombre||'%'
+ ORDER BY CEDULA;
  END;
  /
  
@@ -73,7 +73,8 @@ AS
  BEGIN
  OPEN refcargar for
  SELECT cedula, nombre, apellido, fecha_nacimiento  FROM chofer
- WHERE nombre LIKE '%'||v_nombre||'%' AND ID_AUTOBUS IS NULL;
+ WHERE nombre LIKE '%'||v_nombre||'%' AND ID_AUTOBUS IS NULL
+ ORDER BY CEDULA;
  END;
  /
  
@@ -83,7 +84,8 @@ AS
  OPEN refcargar for
  SELECT a.modelo, a.marca, c.nombre, c.apellido, a.cedula, a.color, a.placa, a.año
  FROM autobus a JOIN chofer c ON (a.cedula = c.cedula)
- WHERE a.modelo LIKE '%'||v_modelo||'%';
+ WHERE a.modelo LIKE '%'||v_modelo||'%'
+ ORDER BY a.ID_AUTOBUS;
  END;
  /
  
@@ -93,7 +95,19 @@ AS
  OPEN refcargar for
  SELECT id_autobus, marca, modelo, placa, color, año
  FROM autobus 
- WHERE modelo LIKE '%'||v_modelo||'%' AND cedula IS NULL;
+ WHERE modelo LIKE '%'||v_modelo||'%' AND cedula IS NULL
+ ORDER BY id_autobus;
+ END;
+ /
+ 
+CREATE OR REPLACE PROCEDURE SP_CARGARAUTOBUSASIGNADOS( refcargar out sys_refcursor, v_modelo in VARCHAR2 )
+AS
+ BEGIN
+ OPEN refcargar for
+ SELECT a.id_autobus, a.cedula, c.nombre, c.apellido, a.marca, a.modelo, a.placa, a.color, a.año
+ FROM autobus a JOIN chofer c ON (a.cedula = c.cedula)
+ WHERE a.modelo LIKE '%'||v_modelo||'%' AND c.id_ruta IS NULL
+ ORDER BY a.id_autobus;
  END;
  /
  
@@ -102,7 +116,8 @@ AS
  BEGIN
  OPEN refcargar for
  SELECT id_ruta, ruta  FROM ruta
- WHERE ruta LIKE '%'||v_ruta||'%';
+ WHERE ruta LIKE '%'||v_ruta||'%'
+ ORDER BY id_ruta;
  END;
  /
  
@@ -111,7 +126,8 @@ AS
  BEGIN
  OPEN refcargar for
  SELECT id_ruta, ruta  FROM ruta
- WHERE ruta LIKE '%'||v_ruta||'%' AND ID_AUTOBUS IS NULL;
+ WHERE ruta LIKE '%'||v_ruta||'%' AND ID_AUTOBUS IS NULL
+ ORDER BY id_ruta;
  END;
  /
  
@@ -171,13 +187,14 @@ AS
 CREATE OR REPLACE PROCEDURE SP_INSERTARAUTOBUS_RUTA ( v_id_autobus in NUMBER, v_id_ruta in NUMBER )
 AS
  BEGIN
- UPDATE AUTOBUS SET ID_RUTA = v_id_ruta;
- UPDATE RUTA SET ID_AUTOBUS = v_id_autobus;
+ UPDATE AUTOBUS SET ID_RUTA = v_id_ruta
+ WHERE ID_AUTOBUS = v_id_autobus;
+ UPDATE RUTA SET ID_AUTOBUS = v_id_autobus
+ WHERE ID_RUTA = v_id_ruta;
+ UPDATE CHOFER SET ID_RUTA = v_id_ruta;
  END;
  /
 
-                
- 
 INSERT INTO RUTA(ID_RUTA, RUTA)
 VALUES (SEQ_RUTA.NEXTVAL, 'Villa Mella');
 
@@ -192,8 +209,6 @@ VALUES (SEQ_RUTA.NEXTVAL, 'La Churchill');
 
 INSERT INTO RUTA(ID_RUTA, RUTA)
 VALUES (SEQ_RUTA.NEXTVAL, 'Puente Juan Carlos');
-
---- Crear procedure de autobus asignados
 
 COMMIT;
 

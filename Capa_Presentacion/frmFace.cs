@@ -25,6 +25,12 @@ namespace Capa_Presentacion
         private void frmFace_Load(object sender, EventArgs e)
         {
             mostrarChoferCompleto("");
+            AccionesTablasChoferCompleto();
+        }
+
+        private void AccionesTablasChoferCompleto()
+        {
+            tablaChoferCompleto.AutoResizeColumns();
         }
 
         public void mostrarChoferCompleto(string buscar)
