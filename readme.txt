@@ -14,7 +14,7 @@ con los nuevos registros que se planean registrar en un futuro.
 Este programa fué desarrollado mediante el patrón MVC, posee cuatros capas y cada una se desenvuelve en distin-
 tos roles dentro del programa, como la lógica, integridad de datos, almacenamiento de datos y interface gráfica.
 
-Me reservo el script de ORACLE para así evitar la clonación del proyecto para fines mal intencionados como subirlos en algún
+Me reservo el script PL/SQL de ORACLE para así evitar la clonación del proyecto para fines mal intencionados como subirlos en algún
 proyecto final, tareas y etc...
 
 Espero que este aporte pueda a ayudar a mas de uno que desee implementar la tecnología de Oracle en Frameworks .NET.
