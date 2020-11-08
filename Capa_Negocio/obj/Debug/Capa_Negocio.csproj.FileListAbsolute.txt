@@ -10,3 +10,15 @@ C:\Users\Bra y Da\source\repos\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.cspro
 C:\Users\Bra y Da\source\repos\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
 C:\Users\Bra y Da\source\repos\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.dll
 C:\Users\Bra y Da\source\repos\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Capa_Datos.dll
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Capa_Entidad.dll
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\bin\Debug\Capa_Entidad.pdb
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.csprojAssemblyReference.cache
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\Users\Bra y Da\Desktop\AutoBus\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
